@@ -23,21 +23,53 @@ choco -v
 choco install ChocolateyGUI
 ```
 
-### Rubyのインストール
+### Ruby(on Rails)インストール
 1. Rubyのインストール
 ```
 choco install ruby
 ```
-2. 環境変数を設定(/rubyxx/bin)
+2. 環境変数を設定()
+```
+変数名：path
+値　　：C:\tools\ruby26\bin
+# ダウンロードパス/rubyxx/bin
+```
 3. msys2のインストール
 ```
-choco install msys2 --params "/NoUpdate" # 非アップデート状態でインストール
-refreshenv                       # or cmd/powershellの再起動
-ridk install 2 3                 # ruby installer2 の 2 3 項目を実行
+# 非アップデート状態でインストール
+choco install msys2 --params "/NoUpdate"
+# or cmd/powershellの再起動 
+refreshenv
 ```
-4. rails関連のインストール
+4. 環境変数の登録
+```
+変数名：MSYS2_PATH_TYPE
+値　　：inherit
+
+変数名：path
+値　　：C:\tools\msys64
+```
+5. ruby installer2 の 2 3 項目を実行
+```
+ridk install 2 3
+```
+6. rails関連のインストール
 ```
 gem install bundle
 gem install rails
 ```
+7. バージョン確認
+```
+gem -v
+rails -v
+```
 
+### yarnインストール
+```
+choco install yarn
+```
+### webpackerで苦戦する
+#### rails webpacker:install した時次のエラーが出力される
+
+
+Gemfileにgem 'webpacker', github: 'rails/webpacker'を書き込んで$bundle install
