@@ -7,6 +7,7 @@
 |Ctrl + K, W|全てのタブを閉じる|
 |Ctrl + K, V|Markdown Preview|
 |Ctrl + Shift + F|Grep検索|
+|Shift + Alt & Drag|矩形範囲選択|
 
 
 ### 拡張機能
